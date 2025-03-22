@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title> Revive-AI</title>
+    <title>Revive-AI</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -19,20 +20,62 @@
             margin: auto;
             border-collapse: collapse;
         }
+
         th, td {
             padding: 10px;
             text-align: center;
-            border: 1px solid #ddd;
         }
+
+        /* Remove table borders */
+        table, th, td {
+            border: none;
+        }
+
+        /* Add style for the title (Make it bigger and bold) */
+        th {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        td p {
+            font-size: 20px; /* Adjusted to make the title bigger */
+            font-weight: bold;
+            margin: 0;
+        }
+
         caption {
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 10px;
         }
+
+        /* Make sure all images are the same size for alignment */
         img {
             width: 200px;
-            height: auto;
+            height: 200px; /* Adjust to make the height the same as width */
+            object-fit: cover; /* Keeps the image aspect ratio while fitting it inside */
             cursor: pointer;
+        }
+
+        /* Align titles and images properly */
+        td {
+            vertical-align: middle; /* Align content vertically to the middle */
+        }
+
+        .cell-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cell-content p {
+            margin-top: 10px;
+        }
+
+        /* Make sure images are aligned vertically */
+        td p, td img {
+            display: block;
+            margin: auto;
         }
     </style>
 </head>
@@ -40,43 +83,37 @@
 <body>
     <div id="content">
         <h1>Our Awesome 3D Reconstruction Playground</h1>
-
-        <br>
         <hr>
         <h2>3D Reconstruction Results</h2>
         <div class="text">
             <p>
-                We provide a reconstruction results for 2 videos using separable coordinates (regular-grid sampled training points)
-                with different combinations fo simple or complex encodings and network depths.
-                Complex encodings with only one single linear layer (without hidden non-linear layers) have comparable performance
-                to simple encodings with deep non-linear MLPs (5 layer MLPs).
-                Complex shifted encodings outperformed complex Fourier feature-based encodings.
+                click on an image to view the 3D reconstruction result.
             </p>
+            
             <table>
                 <tr>
-                    <th scope="row">Gau</th>
-                    <td>
+                    <td class="cell-content">
                         <p>Hello World</p>
                         <a href="./resources/webpages/helloworld.html">
-                            <img src="./resources/imgs/helloworld.png" alt="Simple Depth 0">
+                            <img src="./resources/imgs/helloworld.png" alt="Hello World">
                         </a>
                     </td>
-                    <td>
+                    <td class="cell-content">
                         <p>Grass</p>
                         <a href="./resources/webpages/grass.html">
-                            <img src="./resources/imgs/grass.png" alt="Simple Depth 4">
+                            <img src="./resources/imgs/grass.png" alt="Grass">
                         </a>
                     </td>
-                    <td>
+                    <td class="cell-content">
                         <p>Sculpture</p>
                         <a href="./resources/webpages/sculpture.html">
-                            <img src="./resources/imgs/sculpture.png" alt="Complex Depth 0">
+                            <img src="./resources/imgs/sculpture.png" alt="Sculpture">
                         </a>
                     </td>
-                    <td>
+                    <td class="cell-content">
                         <p>3D Node Example</p>
                         <a href="./resources/webpages/3dnode.html">
-                            <img src="./resources/imgs/3dnode.png" alt="Complex Depth 1">
+                            <img src="./resources/imgs/3dnode.png" alt="3D Node Example">
                         </a>
                     </td>
                 </tr>
@@ -84,12 +121,14 @@
         </div>
         <br>
         
-        
-        <div class='ack_temp'>
-		<p>
-            This template was inspired by project pages from <a href="https://chenhsuanlin.bitbucket.io/">Chen-Hsuan Lin</a> and <a href="http://richzhang.github.io/">Richard Zhang</a>.
-		</p>
-	    </div>
+        <div class="ack_temp">
+            <p>
+                This template was inspired by project pages from 
+                <a href="https://chenhsuanlin.bitbucket.io/">Chen-Hsuan Lin</a> 
+                and <a href="http://richzhang.github.io/">Richard Zhang</a>.
+            </p>
+        </div>
     </div>
 </body>
+
 </html>
