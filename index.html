@@ -2,14 +2,40 @@
 
 <head>
     <title> Revive-AI</title>
-    <meta https-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- CSS Styles -->
     <link rel="stylesheet" href="./assets/css/academicons.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/font-awesome.min.css" />
+    
+    <style>
+        /* Center the table and adjust width */
+        table {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        caption {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
 </head>
-
-<html>
 
 <body>
     <div id="content">
@@ -26,49 +52,32 @@
                 to simple encodings with deep non-linear MLPs (5 layer MLPs).
                 Complex shifted encodings outperformed complex Fourier feature-based encodings.
             </p>
-            <table align=center width=900px>
-                <br>
+            <table>
                 <tr>
-                    <th scope= 'col' style='font-size: 22px'></th>
-                    <th scope= 'col' style='font-size: 22px'>Simple, depth 0</th>
-                    <th scope= 'col' style='font-size: 22px'>Simple, Depth 4</th>
-                    <th scope= 'col' style='font-size: 22px'>Complex, Depth 0</th>
-                    <th scope= 'col' style='font-size: 22px'>Complex, Depth 1</th>
-                </tr>
-
-                <tr>
-                    <th scope= 'row' style='font-size: 22px; -ms-writing-mode: tb-rl;
-                    -webkit-writing-mode: vertical-rl;
-                    writing-mode: vertical-rl;
-                    transform: rotate(180deg);
-                    white-space: nowrap;'>Gau</th>
+                    <th scope="row">Gau</th>
                     <td>
-                        <center>
-                            <video controls autoplay muted playsinline>
-                                <source src='./resources/simple/V0D0gaussianR13.21.mp4' type='video/mp4'>
-                            </video>
-                        </center>
+                        <p>Hello World</p>
+                        <a href="./resources/webpages/helloworld.html">
+                            <img src="./resources/imgs/helloworld.png" alt="Simple Depth 0">
+                        </a>
                     </td>
                     <td>
-                        <center>
-                            <video controls autoplay muted playsinline>
-                                <source src='./resources/simple/V0D5gaussianR22.94.mp4' type='video/mp4'>
-                            </video>
-                        </center>
+                        <p>Grass</p>
+                        <a href="./resources/webpages/grass.html">
+                            <img src="./resources/imgs/grass.png" alt="Simple Depth 4">
+                        </a>
                     </td>
                     <td>
-                        <center>
-                            <video controls autoplay muted playsinline>
-                                <source src='./resources/complex/KV0D0gaussianR23.93.mp4' type='video/mp4'>
-                            </video>
-                        </center>
+                        <p>Sculpture</p>
+                        <a href="./resources/webpages/sculpture.html">
+                            <img src="./resources/imgs/sculpture.png" alt="Complex Depth 0">
+                        </a>
                     </td>
                     <td>
-                        <center>
-                            <video controls autoplay muted playsinline>
-                                <source src='./resources/complex/KV0D1gaussianR25.31.mp4' type='video/mp4'>
-                            </video>
-                        </center>
+                        <p>3D Node Example</p>
+                        <a href="./resources/webpages/3dnode.html">
+                            <img src="./resources/imgs/3dnode.png" alt="Complex Depth 1">
+                        </a>
                     </td>
                 </tr>
             </table>
